@@ -21,7 +21,21 @@ Requires-Dist: cool-python-project[lint,test]; extra == "dev"
 # EClab
 This a codebase for reading EClab Biologic files and making plots
 
-# Get started
+
+## If you do not have Python already, install it with Home Brew
+
+### Home brew
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+### Python
+
+```bash
+brew install python
+```
+
+## If you do have Python already, go directly here
+### Clone repo
 Clone the repository to your local folder:
 ```bash
 git clone https://github.com/Atuxen/EClab.git
@@ -29,21 +43,15 @@ cd EClab
 
 ```
 
-## Install 
+### Install libs and activate VE
+#### Install libs
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-## Install python
-
-```bash
-brew install python
+pip install .
 ```
 
-## Install requirements
+#### Setup virtual environemnt and activate virtual environemnt
 ```bash
-`pip3 install -r requirements.txt`
-```
-## Activate virutal environemnt
-```bash
-`source venv/bin/activate`
+python3 -m venv .venv
+
+`source .venv/bin/activate`
 ```

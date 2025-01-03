@@ -24,10 +24,7 @@ cd EClab
 ```
 
 ### Install libs and activate VE
-#### Install libs
-```bash
-pip install .
-```
+
 
 #### Setup virtual environemnt and activate virtual environemnt
 ```bash
@@ -35,3 +32,9 @@ python3 -m venv .venv
 
 `source .venv/bin/activate`
 ```
+
+#### Install libs
+```bash
+pip install .
+```
+
