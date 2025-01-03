@@ -1,0 +1,16 @@
+pandas
+ipython
+bokeh
+eclabfiles
+
+[dev]
+cool-python-project[lint,test]
+
+[lint]
+ruff==0.4.4
+mypy==1.10.0
+
+[test]
+moto[s3]==4.2.11
+pytest==8.2.0
+behave==1.2.6

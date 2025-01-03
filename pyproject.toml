@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EClab"
+authors = [
+    {name = "Andreas", email = "achtu@dtu.dk"}
+]
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "pandas",
+    "ipython",
+    "bokeh",
+    "eclabfiles",
+
+]
+
+[project.optional-dependencies]
+test = [
+    "moto[s3] == 4.2.11",
+    "pytest == 8.2.0",
+    "behave == 1.2.6",
+]
+lint = [
+    "ruff == 0.4.4",
+    "mypy == 1.10.0",
+]
+dev = [
+    "cool-python-project[test,lint]",
+]
+     
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "F",   # pyflakes
+    "E",   # pycodestyle
+    "I",   # isort
+    "ANN", # flake8 type annotations
+    "RUF", # ruff-specific rules
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+disallow_untyped_defs = true

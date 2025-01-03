@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: EClab
+Version: 0.1.0
+Author-email: Andreas <achtu@dtu.dk>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: ipython
+Requires-Dist: bokeh
+Requires-Dist: eclabfiles
+Provides-Extra: test
+Requires-Dist: moto[s3]==4.2.11; extra == "test"
+Requires-Dist: pytest==8.2.0; extra == "test"
+Requires-Dist: behave==1.2.6; extra == "test"
+Provides-Extra: lint
+Requires-Dist: ruff==0.4.4; extra == "lint"
+Requires-Dist: mypy==1.10.0; extra == "lint"
+Provides-Extra: dev
+Requires-Dist: cool-python-project[lint,test]; extra == "dev"
+
+# EClab
+This a codebase for reading EClab Biologic files and making plots
+
+# Get started
+Clone the repository to your local folder:
+```bash
+git clone https://github.com/Atuxen/EClab.git
+cd EClab
+
+```
+
+## Install 
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+## Install python
+
+```bash
+brew install python
+```
+
+## Install requirements
+```bash
+`pip3 install -r requirements.txt`
+```
+## Activate virutal environemnt
+```bash
+`source venv/bin/activate`
+```
