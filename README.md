@@ -9,21 +9,30 @@ cd EClab
 
 ```
 
-## Install 
+## If you do not have Python, Install it with Home Brew
+
+### Home brew
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-## Install python
+### Python
 
 ```bash
 brew install python
 ```
 
-## Install requirements
+## Install libs and activate VE
+### Install libs
 ```bash
-`pip3 install -r requirements.txt`
+pip install .
 ```
-## Activate virutal environemnt
+
+### Setup virtual environemnt
 ```bash
-`source venv/bin/activate`
+python3 -m venv .venv
+```
+
+### Activate virtual environemnt
+```bash
+`source .venv/bin/activate`
 ```
