@@ -29,12 +29,13 @@ cd EClab
 #### Setup virtual environemnt and activate virtual environemnt
 ```bash
 python3 -m venv .venv
-
-`source .venv/bin/activate`
+source .venv/bin/activate
 ```
 
-#### Install libs
+#### Install packages in pyproject
 ```bash
 pip install .
 ```
+
+
 
