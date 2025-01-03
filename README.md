@@ -15,7 +15,7 @@ brew install python
 ```
 
 ## If you do have Python already, go directly here
-# Clone repo
+### Clone repo
 Clone the repository to your local folder:
 ```bash
 git clone https://github.com/Atuxen/EClab.git
@@ -23,13 +23,13 @@ cd EClab
 
 ```
 
-## Install libs and activate VE
-### Install libs
+### Install libs and activate VE
+#### Install libs
 ```bash
 pip install .
 ```
 
-### Setup virtual environemnt and activate virtual environemnt
+#### Setup virtual environemnt and activate virtual environemnt
 ```bash
 python3 -m venv .venv
 
