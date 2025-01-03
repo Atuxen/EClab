@@ -1,0 +1,7 @@
+dist
+build
+.venv
+.vscode
+**/__pycache__
+**/EClab.egg-info
+.DS_Store
