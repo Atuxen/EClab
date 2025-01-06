@@ -2,6 +2,7 @@ pandas
 ipython
 bokeh
 eclabfiles
+tabulate
 
 [dev]
 cool-python-project[lint,test]

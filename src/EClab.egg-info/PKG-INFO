@@ -8,6 +8,7 @@ Requires-Dist: pandas
 Requires-Dist: ipython
 Requires-Dist: bokeh
 Requires-Dist: eclabfiles
+Requires-Dist: tabulate
 Provides-Extra: test
 Requires-Dist: moto[s3]==4.2.11; extra == "test"
 Requires-Dist: pytest==8.2.0; extra == "test"
@@ -44,14 +45,18 @@ cd EClab
 ```
 
 ### Install libs and activate VE
-#### Install libs
-```bash
-pip install .
-```
+
 
 #### Setup virtual environemnt and activate virtual environemnt
 ```bash
 python3 -m venv .venv
-
-`source .venv/bin/activate`
+source .venv/bin/activate
 ```
+
+#### Install packages in pyproject
+```bash
+pip install .
+```
+
+
+

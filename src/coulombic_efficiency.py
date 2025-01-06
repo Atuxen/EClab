@@ -189,7 +189,9 @@ def cycling_dictionary(path):
             if prefix not in data_dict:
                 data_dict[prefix] = [str(file_path)]
 
-    print(f"Check if these are your files of interest {data_dict}")
+  
+
+    #print(f"Check if these are your files of interest {data_dict}")
 
     return data_dict
 
