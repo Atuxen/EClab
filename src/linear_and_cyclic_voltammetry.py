@@ -1,23 +1,19 @@
-import eclabfiles as ecf
-from bokeh.plotting import figure, show, output_notebook
-from bokeh.palettes import small_palettes, mpl
-from bokeh.models import Range1d, LinearAxis
-import math
-import pandas as pd
-from pathlib import Path
 import os
+from pathlib import Path
+
+import eclabfiles as ecf
+from bokeh.palettes import small_palettes
+from bokeh.plotting import figure, output_notebook, show
+
+# Color scheme
+backgrund_color = "whitesmoke"
+plot_color = "whitesmoke"
 
 # Define the folder path
 cwd = Path(os.getcwd()).parents[0]
 print(f"Current working directory: {cwd}")
 
-
-
 # Linear Sweep Voltammetry function
-
-from bokeh.plotting import figure, output_notebook, show
-from bokeh.palettes import small_palettes
-
 
 class DataFrameEmpty(Exception):
     pass
@@ -31,6 +27,7 @@ def LSV_plot(data_dict, threshold=None, electrodePotential=0):
         y_axis_label="Current density (mA/cm^2)",
         width=800,
         height=400,
+        tools = "hover",
     )
 
     # Constrain axes
@@ -38,6 +35,9 @@ def LSV_plot(data_dict, threshold=None, electrodePotential=0):
     lsv.x_range.end = 4
     lsv.y_range.start = -20
     lsv.y_range.end = 20
+
+    lsv.background_fill_color = plot_color
+    lsv.border_fill_color = backgrund_color
 
     color = 0
     for key, value in data_dict.items():
@@ -78,8 +78,8 @@ def LSV_plot(data_dict, threshold=None, electrodePotential=0):
 
         color += 1
 
-    lsv.legend.location = "top_left"
-    lsv.legend.title = "ZnSO4 Concentrations"
+    lsv.legend.location = "bottom_right"
+    #lsv.legend.title = "ZnSO4 Concentrations"
     if threshold:
         lsv.vspan(
             x=[threshold + electrodePotential],
@@ -106,6 +106,7 @@ def cv_plot(data_dict):
         y_axis_label="Current density (mA/cm^2)",
         width=800,
         height=400,
+        tools = "hover",
     )
 
     ## Constrain axes
@@ -113,6 +114,9 @@ def cv_plot(data_dict):
     # cv.x_range.end = 4
     # cv.y_range.start = -20
     # cv.y_range.end = 20
+
+    cv.background_fill_color = plot_color
+    cv.border_fill_color = backgrund_color
 
     color = 0
     for key, value in data_dict.items():
@@ -146,7 +150,7 @@ def cv_plot(data_dict):
         color += 1
 
     cv.legend.location = "top_left"
-    cv.legend.title = "ZnSO4 Concentrations"
+    #cv.legend.title = "ZnSO4 Concentrations"
 
     show(cv)
 

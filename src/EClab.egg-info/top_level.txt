@@ -1,3 +1,4 @@
 coulombic_efficiency
 linear_and_cyclic_voltammetry
 peis
+utils

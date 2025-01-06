@@ -9,6 +9,8 @@ Requires-Dist: ipython
 Requires-Dist: bokeh
 Requires-Dist: eclabfiles
 Requires-Dist: tabulate
+Requires-Dist: ruff
+Requires-Dist: mypy
 Provides-Extra: test
 Requires-Dist: moto[s3]==4.2.11; extra == "test"
 Requires-Dist: pytest==8.2.0; extra == "test"
@@ -19,13 +21,19 @@ Requires-Dist: mypy==1.10.0; extra == "lint"
 Provides-Extra: dev
 Requires-Dist: cool-python-project[lint,test]; extra == "dev"
 
-# EClab
-This a codebase for reading EClab Biologic files and making plots
+# Read EClab files and produce plots
+
+# Quick setup in Google colab
+
+Explore and test this project directly in Google Colab with no setup required: [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Atuxen/EClab/blob/main/notebook.ipynb)
 
 
-## If you do not have Python already, install it with Home Brew
 
-### Home brew
+
+
+
+# Local install
+### Home brew (for installing python if you do not have already)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -35,7 +43,6 @@ This a codebase for reading EClab Biologic files and making plots
 brew install python
 ```
 
-## If you do have Python already, go directly here
 ### Clone repo
 Clone the repository to your local folder:
 ```bash

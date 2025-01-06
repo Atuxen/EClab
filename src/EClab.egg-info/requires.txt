@@ -3,6 +3,8 @@ ipython
 bokeh
 eclabfiles
 tabulate
+ruff
+mypy
 
 [dev]
 cool-python-project[lint,test]

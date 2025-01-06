@@ -16,6 +16,7 @@ dependencies = [
     "bokeh",
     "eclabfiles",
     "tabulate",
+  
 
 ]
 
@@ -24,6 +25,8 @@ test = [
     "moto[s3] == 4.2.11",
     "pytest == 8.2.0",
     "behave == 1.2.6",
+    "ruff", 
+    "mypy",
 ]
 lint = [
     "ruff == 0.4.4",

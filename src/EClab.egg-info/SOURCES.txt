@@ -2,115 +2,6 @@
 README.md
 notebook.ipynb
 pyproject.toml
-data/CV/.DS_Store
-data/CV/G4-ZnTFSI(4-1)_CV_2_C03.mpr
-data/CV/G4-ZnTFSI(4-1)_CV_C03.mpr
-data/CV/LSV_G4-ZnTFSI(4-1)_CV.mps
-data/CV/LSV_G4-ZnTFSI(4-1)_CV_2.mps
-data/CV/LSV_ZnSO4_H2O(3molar)_CV.mps
-data/CV/ZnSO4_H2O(3molar)_CV_C03.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel.mps
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_01_PEIS_C06.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_01_PEIS_C06.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_02_GCPL_C06.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_02_GCPL_C06.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_03_PEIS_C06.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_03_PEIS_C06.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_D104_C06.sta
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass.mps
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_D104_C16.sta
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel.mps
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_01_PEIS_C01.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_01_PEIS_C01.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_02_GCPL_C01.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_02_GCPL_C01.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_03_PEIS_C01.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_03_PEIS_C01.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_D104_C01.sta
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass.mps
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_D104_C16.sta
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel.mps
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_01_PEIS_C03.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_01_PEIS_C03.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_02_GCPL_C03.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_02_GCPL_C03.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_03_PEIS_C03.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_03_PEIS_C03.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_D104_C03.sta
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass.mps
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mgr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
-data/ZnSO4 characterization week2/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_D104_C16.sta
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2.mps
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mpl
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mpl
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mpl
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_D104_C01.sta
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel.mps
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_D104_C01.sta
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel.mps
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mpl
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mpl
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mgr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpl
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpr
-data/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_D104_C06.sta
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2.mps
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mpl
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mpl
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mpl
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_D104_C01.sta
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel.mps
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_D104_C01.sta
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel.mps
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mpl
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mpl
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mgr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpl
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpr
-data/ZnTFSI2 characterization2/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_D104_C06.sta
 data/files/.DS_Store
 data/files/CV_files/.DS_Store
 data/files/CV_files/G4-ZnTFSI(4-1)_CV_2_C03.mpr
@@ -151,12 +42,11 @@ data/files/PEIS_files/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mpr
 data/files/PEIS_files/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mpr
 data/files/PEIS_files/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mpr
 data/files/PEIS_files/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpr
-src/CoulombicEfficiency.ipynb
-src/LinearAndCyclingVoltammetry.ipynb
 src/PEIS.ipynb
 src/coulombic_efficiency.py
 src/linear_and_cyclic_voltammetry.py
 src/peis.py
+src/utils.py
 src/EClab.egg-info/PKG-INFO
 src/EClab.egg-info/SOURCES.txt
 src/EClab.egg-info/dependency_links.txt
