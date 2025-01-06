@@ -1,7 +1,15 @@
 # EClab
 This a codebase for reading EClab Biologic files and making plots
 
+# For quick setup in Google colab
 
+Explore and test this project directly in Google Colab with no setup required:
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Atuxen/EClab.git/blob/main/notebook.ipynb)
+
+
+
+# For local install
 ## If you do not have Python already, install it with Home Brew
 
 ### Home brew
