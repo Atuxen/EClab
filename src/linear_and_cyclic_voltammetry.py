@@ -156,7 +156,7 @@ def cv_plot(data_dict):
 def lsv_dictionary(path):
     folder_path = Path(path)
 
-    print(folder_path.name)
+    
 
     data_dict = {}
 
@@ -185,7 +185,7 @@ def lsv_dictionary(path):
             else:
                 data_dict[prefix].append(str(file_path))
 
-    print(f"Check if these are your files of interest {data_dict}")
+
 
     return data_dict
 
@@ -218,6 +218,6 @@ def cv_dictionary(path):
             if prefix not in data_dict:
                 data_dict[prefix] = [str(file_path)]
 
-    print(f"Check if these are your files of interest {data_dict}")
+   
 
     return data_dict
