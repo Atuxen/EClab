@@ -6,7 +6,7 @@ from bokeh.palettes import small_palettes
 from bokeh.plotting import figure, output_notebook, show
 
 # Color scheme
-backgrund_color = "whitesmoke"
+backgrund_color = "white"
 plot_color = "whitesmoke"
 
 # Define the folder path

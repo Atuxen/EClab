@@ -5,7 +5,7 @@ from bokeh.plotting import figure, output_notebook, show
 import numpy as np
 
 # Color scheme
-backgrund_color = "whitesmoke"
+backgrund_color = "white"
 plot_color = "whitesmoke"
 
 class DataFrameEmpty(Exception):
@@ -13,7 +13,20 @@ class DataFrameEmpty(Exception):
 
 def GCPL(GCPL_paths):
 
+    output_notebook()
+    GCPL = figure(
+        title="Galvanostatic Cycling with Potential Limitation",
+        x_axis_label="Time (h)",
+        y_axis_label="Ewe (V vs Zn)",
+        width=800,
+        height=300,
+        tools = "hover",
+    )
+    GCPL.background_fill_color = plot_color
+    GCPL.border_fill_color = backgrund_color
+
     # Load data
+    color = 0
     for key, value in GCPL_paths.items():
         try:
             df = ecf.to_df(value[0])
@@ -25,45 +38,36 @@ def GCPL(GCPL_paths):
             continue
         except Exception as e:
             print(f"Error processing {key}: {e}")
+            continue
 
-        df = ecf.to_df(value[0])
+        #df = ecf.to_df(value[0])
 
         df["Hours"] = df["time"]/3600 # From seconds to hours
         time = df["Hours"]
         potential = df["Ewe"]
 
-        output_notebook()
-        GCPL = figure(
-            title="Galvanostatic Cycling with Potential Limitation",
-            x_axis_label="Time (h)",
-            y_axis_label="Ewe (V vs Zn)",
-            width=800,
-            height=300,
-            tools = "hover",
-        )
-    
-        GCPL.background_fill_color = plot_color
-        GCPL.border_fill_color = backgrund_color
-        
+  
+        colors = small_palettes["Viridis"][4]
         GCPL.line(
             time,
             potential,
             legend_label=key,
-            line_color="green",
+            line_color=colors[color % len(colors)],
             line_width=1,
             
         )
-        GCPL.legend.location = "bottom_right"
+        color += 1
+    GCPL.legend.location = "bottom_right"
 
-        show(GCPL)
+    show(GCPL)
 
 def CEplot(dict):
 
     output_notebook()
     CE = figure(
-        title="Coloumbic Effciency",
+        title="Coulombic Effeciency",
         x_axis_label="Cycle number",
-        y_axis_label="Coloumbic Effciency (%)",
+        y_axis_label="Coulombic Effeciency (%)",
         width=800,
         height=400,
         tools = "hover",
@@ -123,10 +127,10 @@ def cap_retention(dict):
     )
 
     ## Constrain axes
-    CR.x_range.start = -0.5  # Set x-axis range from 0 to 3V
-    CR.x_range.end = 500
-    CR.y_range.start = 0  # Set y-axis range from 0 to 20 mA/cm^2
-    CR.y_range.end = 100
+    #CR.x_range.start = -0.5  # Set x-axis range from 0 to 3V
+    #CR.x_range.end = 500
+    #CR.y_range.start = 0  # Set y-axis range from 0 to 20 mA/cm^2
+    #CR.y_range.end = 100
 
     CR.background_fill_color = plot_color
     CR.border_fill_color = backgrund_color
@@ -155,6 +159,8 @@ def cap_retention(dict):
             legend_label=key,
             color=colors[color % len(colors)],
         )
+
+
         color += 1
 
     CR.legend.location = "bottom_right"
@@ -190,7 +196,7 @@ def columbicEf(df):
     coulombic_efficiency = (discharge_cycles / charge_cycles) * 100
 
     # Capacity Retention
-    intial_discharge_retention = np.ones(len(discharge_cycles)) * discharge_cycles[0]
+    intial_discharge_retention = np.ones(len(discharge_cycles)) * discharge_cycles[3] # I am choosing 3 here cause the first cycles are often a littel voltaile
     # print("Discharge retetntion", intial_discharge_retention)
     # print("Discharge cycle", discharge_cycles)
     capacity_retention = (discharge_cycles / intial_discharge_retention) * 100
