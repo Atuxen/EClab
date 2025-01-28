@@ -3,8 +3,7 @@ ipython
 bokeh
 eclabfiles
 tabulate
-ruff
-mypy
+selenium
 
 [dev]
 cool-python-project[lint,test]
@@ -17,3 +16,5 @@ mypy==1.10.0
 moto[s3]==4.2.11
 pytest==8.2.0
 behave==1.2.6
+ruff
+mypy

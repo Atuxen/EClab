@@ -3,6 +3,7 @@ import eclabfiles as ecf
 from bokeh.palettes import small_palettes
 from bokeh.plotting import figure, output_notebook, show
 import numpy as np
+from bokeh.io import export_png
 
 # Color scheme
 backgrund_color = "white"
@@ -20,7 +21,7 @@ def GCPL(GCPL_paths):
         y_axis_label="Ewe (V vs Zn)",
         width=800,
         height=300,
-        tools = "hover",
+        tools="box_select,box_zoom,lasso_select,reset",
     )
     GCPL.background_fill_color = plot_color
     GCPL.border_fill_color = backgrund_color
@@ -70,14 +71,14 @@ def CEplot(dict):
         y_axis_label="Coulombic Effeciency (%)",
         width=800,
         height=400,
-        tools = "hover",
+        tools="box_zoom,lasso_select,reset, save",
     )
 
     ## Constrain axes
     # CE.x_range.start = -0.5  # Set x-axis range from 0 to 3V
     # CE.x_range.end = 4
-    # CE.y_range.start = -20  # Set y-axis range from 0 to 20 mA/cm^2
-    # CE.y_range.end = 20
+    CE.y_range.start = 0  # Set y-axis range from 0 to 20 mA/cm^2
+    CE.y_range.end = 100
 
     color = 0
     for key, value in dict.items():
@@ -100,18 +101,28 @@ def CEplot(dict):
 
         # Plot
         colors = small_palettes["Viridis"][4]
-        CE.line(
+        #CE.line(
+        #    cycle,
+        #    coleff,
+        #    legend_label=key,
+        #    line_color=colors[color % len(colors)],
+        #    line_width=1,
+        #)
+
+        CE.scatter(
             cycle,
             coleff,
             legend_label=key,
-            line_color=colors[color % len(colors)],
-            line_width=1,
+            color=colors[color % len(colors)],
         )
 
         color += 1
 
     CE.legend.location = "bottom_right"
     #CE.legend.title = "ZnSO4 Concentrations"
+
+    # save the results to a file
+    #export_png(CE, filename=f"./{key}.png")
     show(CE)
 
 
@@ -123,7 +134,7 @@ def cap_retention(dict):
         y_axis_label="Capacity retention (%)",
         width=800,
         height=400,
-        tools = "hover",
+        tools="box_select,box_zoom,lasso_select,reset",
     )
 
     ## Constrain axes
@@ -210,6 +221,9 @@ def columbicEf(df):
 
 
 
+
+
+
 def cycling_dictionary(path):
     folder_path = Path(path)
     data_dict = {}
@@ -245,5 +259,10 @@ def cycling_dictionary(path):
 
 
 
+def function(x):
+    
+    y = x+2
+    print(y)
 
+    return
 

@@ -27,14 +27,14 @@ def LSV_plot(data_dict, threshold=None, electrodePotential=0):
         y_axis_label="Current density (mA/cm^2)",
         width=800,
         height=400,
-        tools = "hover",
+        tools="box_select,box_zoom,lasso_select,reset",
     )
 
     # Constrain axes
-    lsv.x_range.start = -0.5
-    lsv.x_range.end = 4
-    lsv.y_range.start = -20
-    lsv.y_range.end = 20
+    #lsv.x_range.start = -0.5
+    #lsv.x_range.end = 4
+    #lsv.y_range.start = -20
+    #lsv.y_range.end = 20
 
     lsv.background_fill_color = plot_color
     lsv.border_fill_color = backgrund_color
@@ -106,7 +106,7 @@ def cv_plot(data_dict):
         y_axis_label="Current density (mA/cm^2)",
         width=800,
         height=400,
-        tools = "hover",
+        tools="box_select,box_zoom,lasso_select,reset",
     )
 
     ## Constrain axes

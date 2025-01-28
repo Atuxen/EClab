@@ -1,4 +1,5 @@
-coulombic_efficiency
+cycling
 linear_and_cyclic_voltammetry
 peis
+readmps
 utils

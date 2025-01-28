@@ -16,6 +16,7 @@ dependencies = [
     "bokeh",
     "eclabfiles",
     "tabulate",
+    "selenium"
   
 
 ]

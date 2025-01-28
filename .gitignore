@@ -5,3 +5,7 @@ build
 **/__pycache__
 **/EClab.egg-info
 .DS_Store
+**/lab-notebooks
+**/.mypy_cache
+**/.ruff_cache
+**/data
