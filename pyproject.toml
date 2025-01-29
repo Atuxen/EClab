@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "EClab"
+name = "eclab-visual"
 authors = [
     {name = "Andreas", email = "achtu@dtu.dk"}
 ]
