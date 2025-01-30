@@ -21,7 +21,7 @@ def GCPL(GCPL_paths):
         y_axis_label="Ewe (V vs Zn)",
         width=800,
         height=300,
-        tools="box_select,box_zoom,lasso_select,reset",
+        #tools="box_select,box_zoom,lasso_select,reset",
     )
     GCPL.background_fill_color = plot_color
     GCPL.border_fill_color = backgrund_color
@@ -58,7 +58,9 @@ def GCPL(GCPL_paths):
             
         )
         color += 1
-    GCPL.legend.location = "bottom_right"
+    GCPL.legend.location = (0, 200)#"bottom_right"
+
+   
 
     show(GCPL)
 
