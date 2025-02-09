@@ -94,6 +94,70 @@ def LSV_plot(data_dict, threshold=None, electrodePotential=0):
 # Cyclic voltammetry function
 
 
+def LSV_plot_2(file, threshold=None, electrodePotential=0):
+    print("Running")
+    output_notebook()
+    lsv = figure(
+        title="Linear Sweep Voltammetry",
+        x_axis_label="Potential (V vs Zn)",
+        y_axis_label="Current density (mA/cm^2)",
+        width=800,
+        height=400,
+        tools="box_select,box_zoom,lasso_select,reset",
+    )
+
+    # Constrain axes
+    #lsv.x_range.start = -0.5
+    #lsv.x_range.end = 4
+    #lsv.y_range.start = -20
+    #lsv.y_range.end = 20
+
+    lsv.background_fill_color = plot_color
+    lsv.border_fill_color = backgrund_color
+
+    color = 0
+   
+        
+    try:
+        # Load data
+        df = ecf.to_df(file)
+        if df.empty:
+            raise DataFrameEmpty(f"Data frame is empty for {file}")
+        # Adjust potential and current density
+        # SCE = 0.241
+        el_surface_area = 2.48
+        potential = df["Ewe"] + electrodePotential
+        current = df["<I>"] / el_surface_area
+        # Plot
+        colors = small_palettes["Viridis"][4]
+        lsv.line(
+            potential,
+            current,
+            legend_label=file,
+            line_color=colors[color % len(colors)],
+            line_width=2,
+        )
+    except DataFrameEmpty as eD:
+        print(f"{eD}")
+        
+    except Exception as e:
+        print(f"Error processing {file}: {e}")
+    color += 1
+
+    lsv.legend.location = "bottom_right"
+    #lsv.legend.title = "ZnSO4 Concentrations"
+    if threshold:
+        lsv.vspan(
+            x=[threshold + electrodePotential],
+            line_width=[1],
+            line_color="black",
+            line_dash="dashed",
+            legend_label="Threshold",
+        )
+
+    show(lsv)
+
+
 class DataFrameEmpty(Exception):
     pass
 
@@ -160,8 +224,6 @@ def cv_plot(data_dict):
 def lsv_dictionary(path):
     folder_path = Path(path)
 
-    
-
     data_dict = {}
 
     # Iterate over all .mpr files that contain "LSV"
@@ -190,8 +252,46 @@ def lsv_dictionary(path):
                 data_dict[prefix].append(str(file_path))
 
 
-
     return data_dict
+
+
+
+def lsv_dictionary_2(path):
+    folder_path = Path(path)
+
+    data = []
+
+    # Iterate over all .mpr files that contain "LSV"
+    for file_path in folder_path.iterdir():
+        if (
+            file_path.is_file()
+            and file_path.suffix == ".mpr"
+            and "LSV" in file_path.name
+        ):
+            # Find the position of "LSV"
+            file_name = file_path.name
+            lsv_index = file_name.find("LSV")
+
+            # Extract 4 characters before "LSV"
+            if lsv_index > 4:  # Ensure there are at least 4 characters before
+                prefix = file_name[: lsv_index - 4]
+                # print(f"Prefix before 'LSV': {prefix}")
+            else:
+                print(f"Not enough characters before 'LSV' in {file_name}")
+                prefix = "InvalidPrefix"
+
+            ## Add the file name to the dictionary under the appropriate prefix
+            #if prefix not in data_dict:
+            #    data_dict[prefix] = [str(file_path)]
+            #else:
+            #    data_dict[prefix].append(str(file_path))
+            #
+            #
+            data.append(str(file_path))
+
+
+    return data
+    
 
 
 # CV dictionary maker

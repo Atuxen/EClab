@@ -1,11 +1,9 @@
 .gitignore
+EClab.code-workspace
 README.md
 notebook.ipynb
 pyproject.toml
 data/files/.DS_Store
-data/files/G4-ZnTFSI(4-1)_CV_2_C03.mpr
-data/files/G4-ZnTFSI(4-1)_CV_C03.mpr
-data/files/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_01_GCPL_C06.mpr
 src/EClab.egg-info/PKG-INFO
 src/EClab.egg-info/SOURCES.txt
 src/EClab.egg-info/dependency_links.txt

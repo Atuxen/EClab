@@ -4,6 +4,9 @@ from bokeh.palettes import small_palettes
 from bokeh.plotting import figure, output_notebook, show
 import numpy as np
 from bokeh.io import export_png
+import pandas as pd
+from IPython.display import HTML, display
+
 
 # Color scheme
 backgrund_color = "white"
@@ -12,57 +15,111 @@ plot_color = "whitesmoke"
 class DataFrameEmpty(Exception):
     pass
 
-def GCPL(GCPL_paths):
 
-    output_notebook()
-    GCPL = figure(
-        title="Galvanostatic Cycling with Potential Limitation",
-        x_axis_label="Time (h)",
-        y_axis_label="Ewe (V vs Zn)",
-        width=800,
-        height=300,
-        #tools="box_select,box_zoom,lasso_select,reset",
-    )
-    GCPL.background_fill_color = plot_color
-    GCPL.border_fill_color = backgrund_color
 
-    # Load data
-    color = 0
-    for key, value in GCPL_paths.items():
-        try:
-            df = ecf.to_df(value[0])
-            if df.empty:
-                raise DataFrameEmpty(f"Data frame is empty for {key}")
+class DataDictionary:
+    """Collects file paths from a directory based on a given filetype."""
 
-        except DataFrameEmpty as eD:
-            print(f"Error processing frame: {eD}")
-            continue
-        except Exception as e:
-            print(f"Error processing {key}: {e}")
-            continue
+    def __init__(self, path: str, filetype: str):
+        self.background_color = "white"
+        self.plot_color = "whitesmoke"
+        self.path = path
+        self.data_dict = self._build_data_dict(filetype)
+        self.tabulate()
 
-        #df = ecf.to_df(value[0])
+    def _build_data_dict(self, filetype: str) -> dict:
+        folder_path = Path(self.path)
+        data_dict = {}
 
-        df["Hours"] = df["time"]/3600 # From seconds to hours
+        for file_path in folder_path.iterdir():
+            if (
+                file_path.is_file()
+                and file_path.suffix == ".mpr"
+                and filetype in file_path.name
+            ):
+                file_name = file_path.name
+                filetype_index = file_name.find(filetype)
+
+                if filetype_index > 1:
+                    prefix = file_name[: filetype_index - 1]
+                else:
+                    print(f"Not enough characters before filetype in {file_name}")
+                    prefix = "InvalidPrefix"
+
+                # Add the file name to the dictionary under the appropriate prefix
+
+                try:
+                    df = ecf.to_df(file_path)
+                    if df.empty:
+                        raise DataFrameEmpty(f"Data frame is empty for {prefix}")
+                    if prefix not in data_dict:
+                    
+                        data_dict[prefix] = []
+                    data_dict[prefix].append(str(file_path))
+
+                except DataFrameEmpty as eD:
+                    print(f"Error processing frame: {eD}")
+                    continue
+                except Exception as e:
+                    print(f"Error processing {key}: {e}")
+                    continue
+                
+
+        return data_dict
+
+    def tabulate(self):
+        # Flatten the dictionary into rows
+        print("Check if this is your intended data:")
+        flattened_data = [{'Sample': key, 'File path': value[0]} for key, value in self.data_dict.items()]
+        df = pd.DataFrame(flattened_data)
+        display(HTML(df.to_html()))
+
+
+class CyclingData(DataDictionary):
+    """Specialized DataDictionary that always looks for 'GCPL'."""
+
+    def __init__(self, path: str):
+        super().__init__(path, "GCPL")
+
+    def gcpl_plot(self, items):
+        """
+        Plots galvanostatic cycling data for the given dictionary prefix.
+        """
+
+        key = list(self.data_dict)[items]
+        file_path = list(self.data_dict.values())[items][0]
+
+        # For now, assume only 1 file in the list:
+        df = ecf.to_df(file_path)
+        df["Hours"] = df["time"] / 3600  # from seconds to hours
+
         time = df["Hours"]
         potential = df["Ewe"]
 
-  
+        output_notebook()
+
+        fig = figure(
+            title = key,
+            x_axis_label="Time (h)",
+            y_axis_label="Ewe (V vs Zn)",
+            width=800,
+            height=300,
+            background_fill_color = self.background_color,
+            border_fill_color = self.plot_color  # or background_fill_color if desired
+        )
+
         colors = small_palettes["Viridis"][4]
-        GCPL.line(
+        fig.line(
             time,
             potential,
             legend_label=key,
-            line_color=colors[color % len(colors)],
-            line_width=1,
-            
+            line_color=colors[0],  # or however you want to pick colors
+            line_width=1
         )
-        color += 1
-    GCPL.legend.location = (0, 200)#"bottom_right"
 
-   
+        fig.legend.location = "bottom_right"
+        show(fig)
 
-    show(GCPL)
 
 def CEplot(dict):
 
@@ -226,38 +283,6 @@ def columbicEf(df):
 
 
 
-def cycling_dictionary(path):
-    folder_path = Path(path)
-    data_dict = {}
-
-    # Iterate over all .mpr files that contain "LSV"
-    for file_path in folder_path.iterdir():
-        if (
-            file_path.is_file()
-            and file_path.suffix == ".mpr"
-            and "GCPL" in file_path.name
-        ):
-            # Find the position of "GCLP"
-            file_name = file_path.name
-            lsv_index = file_name.find("GCPL")
-
-            # Extract 4 characters before "LSV"
-            if lsv_index > 1:  # Ensure there are at least 4 characters before
-                prefix = file_name[: lsv_index - 1]
-                # print(f"Prefix before 'LSV': {prefix}")
-            else:
-                print(f"Not enough characters before 'CV' in {file_name}")
-                prefix = "InvalidPrefix"
-
-            # Add the file name to the dictionary under the appropriate prefix
-            if prefix not in data_dict:
-                data_dict[prefix] = [str(file_path)]
-
-  
-
-    #print(f"Check if these are your files of interest {data_dict}")
-
-    return data_dict
 
 
 
