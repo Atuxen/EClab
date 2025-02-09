@@ -15,8 +15,6 @@ plot_color = "whitesmoke"
 class DataFrameEmpty(Exception):
     pass
 
-
-
 class DataDictionary:
     """Collects file paths from a directory based on a given filetype."""
 
@@ -31,7 +29,10 @@ class DataDictionary:
         folder_path = Path(self.path)
         data_dict = {}
 
-        for file_path in folder_path.iterdir():
+        
+        
+
+        for file_path in folder_path.glob('**/*'):
             if (
                 file_path.is_file()
                 and file_path.suffix == ".mpr"
@@ -61,7 +62,7 @@ class DataDictionary:
                     print(f"Error processing frame: {eD}")
                     continue
                 except Exception as e:
-                    print(f"Error processing {key}: {e}")
+                    print(f"Error processing {prefix}: {e}")
                     continue
                 
 
@@ -86,20 +87,14 @@ class CyclingData(DataDictionary):
         Plots galvanostatic cycling data for the given dictionary prefix.
         """
 
-        key = list(self.data_dict)[items]
-        file_path = list(self.data_dict.values())[items][0]
-
-        # For now, assume only 1 file in the list:
-        df = ecf.to_df(file_path)
-        df["Hours"] = df["time"] / 3600  # from seconds to hours
-
-        time = df["Hours"]
-        potential = df["Ewe"]
+        if len(items) == 1:
+            plot_title = list(self.data_dict)[0]
+        else: 
+            plot_title = "Galvanostatic Cycling"
 
         output_notebook()
-
         fig = figure(
-            title = key,
+            title = plot_title,
             x_axis_label="Time (h)",
             y_axis_label="Ewe (V vs Zn)",
             width=800,
@@ -108,17 +103,29 @@ class CyclingData(DataDictionary):
             border_fill_color = self.plot_color  # or background_fill_color if desired
         )
 
-        colors = small_palettes["Viridis"][4]
-        fig.line(
-            time,
-            potential,
-            legend_label=key,
-            line_color=colors[0],  # or however you want to pick colors
-            line_width=1
-        )
+        for i in items:
+            key = list(self.data_dict)[i]
+            file_path = list(self.data_dict.values())[i][0]
+
+            df = ecf.to_df(file_path)
+            df["Hours"] = df["time"] / 3600  # from seconds to hours
+
+            time = df["Hours"]
+            potential = df["Ewe"]
+
+            colors = small_palettes["Viridis"][4]
+
+            fig.line(
+                time,
+                potential,
+                legend_label=key,
+                line_color=colors[i],  # or however you want to pick colors
+                line_width=1
+            )
 
         fig.legend.location = "bottom_right"
         show(fig)
+
 
 
 def CEplot(dict):
