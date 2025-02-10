@@ -1,327 +1,186 @@
 import os
 from pathlib import Path
-
-import eclabfiles as ecf
 from bokeh.palettes import small_palettes
 from bokeh.plotting import figure, output_notebook, show
-
-# Color scheme
-backgrund_color = "white"
-plot_color = "whitesmoke"
-
-# Define the folder path
-cwd = Path(os.getcwd()).parents[0]
-print(f"Current working directory: {cwd}")
+from src.eclabvisual.utils import Grapher
+import eclabfiles as ecf
+import pandas as pd
 
 # Linear Sweep Voltammetry function
 
 class DataFrameEmpty(Exception):
     pass
 
+class VoltammetryGrapher(Grapher):
+    
+    def __init__(self, data):
+        super().__init__()
+        self.SCE = 0.241
+        self.el_surface_area = 2.48
+        self.data_cv = data.data_cv
+        self.data_lsv = data.data_lsv
 
-def LSV_plot(data_dict, threshold=None, electrodePotential=0):
-    output_notebook()
-    lsv = figure(
-        title="Linear Sweep Voltammetry",
-        x_axis_label="Potential (V vs Zn)",
-        y_axis_label="Current density (mA/cm^2)",
-        width=800,
-        height=400,
-        tools="box_select,box_zoom,lasso_select,reset",
-    )
+    def cv_plot(self, items):
+        output_notebook()
+        if len(items) == 1:
+            plot_title = f"Cyclic Voltammetry of {list(self.data_cv)[items[0]]}"
+        else: 
+            plot_title = "Cyclic Voltammetry"
 
-    # Constrain axes
-    #lsv.x_range.start = -0.5
-    #lsv.x_range.end = 4
-    #lsv.y_range.start = -20
-    #lsv.y_range.end = 20
-
-    lsv.background_fill_color = plot_color
-    lsv.border_fill_color = backgrund_color
-
-    color = 0
-    for key, value in data_dict.items():
-        for i, path in enumerate(value):
-            try:
-                # Load data
-                df = ecf.to_df(path)
-                if df.empty:
-                    raise DataFrameEmpty(f"Data frame is empty for {key}")
-
-                # Apply threshold filter
-                if threshold:
-                    if "01_LSV" in path:
-                        df = df[df["Ewe"] >= threshold]
-                    if "02_LSV" in path:
-                        df = df[df["Ewe"] <= threshold]
-
-                # Adjust potential and current density
-                # SCE = 0.241
-                el_surface_area = 2.48
-                potential = df["Ewe"] + electrodePotential
-                current = df["<I>"] / el_surface_area
-
-                # Plot
-                colors = small_palettes["Viridis"][4]
-                lsv.line(
-                    potential,
-                    current,
-                    legend_label=key,
-                    line_color=colors[color % len(colors)],
-                    line_width=2,
-                )
-            except DataFrameEmpty as eD:
-                print(f"{eD}")
-                continue
-            except Exception as e:
-                print(f"Error processing {key}: {e}")
-
-        color += 1
-
-    lsv.legend.location = "bottom_right"
-    #lsv.legend.title = "ZnSO4 Concentrations"
-    if threshold:
-        lsv.vspan(
-            x=[threshold + electrodePotential],
-            line_width=[1],
-            line_color="black",
-            line_dash="dashed",
-            legend_label="Threshold",
+        cv = figure(
+            title="Cyclic Voltammetry",
+            x_axis_label="Potential (V vs Zn)",
+            y_axis_label="Current density (mA/cm^2)",
+            width=800,
+            height=400,
+            background_fill_color = self.plot_color,
+            border_fill_color = self.background_color,
+            #tools="box_select,box_zoom,lasso_select,reset",
         )
 
-    show(lsv)
-
-# Cyclic voltammetry function
-
-
-def LSV_plot_2(file, threshold=None, electrodePotential=0):
-    print("Running")
-    output_notebook()
-    lsv = figure(
-        title="Linear Sweep Voltammetry",
-        x_axis_label="Potential (V vs Zn)",
-        y_axis_label="Current density (mA/cm^2)",
-        width=800,
-        height=400,
-        tools="box_select,box_zoom,lasso_select,reset",
-    )
-
-    # Constrain axes
-    #lsv.x_range.start = -0.5
-    #lsv.x_range.end = 4
-    #lsv.y_range.start = -20
-    #lsv.y_range.end = 20
-
-    lsv.background_fill_color = plot_color
-    lsv.border_fill_color = backgrund_color
-
-    color = 0
-   
-        
-    try:
-        # Load data
-        df = ecf.to_df(file)
-        if df.empty:
-            raise DataFrameEmpty(f"Data frame is empty for {file}")
-        # Adjust potential and current density
-        # SCE = 0.241
-        el_surface_area = 2.48
-        potential = df["Ewe"] + electrodePotential
-        current = df["<I>"] / el_surface_area
-        # Plot
-        colors = small_palettes["Viridis"][4]
-        lsv.line(
-            potential,
-            current,
-            legend_label=file,
-            line_color=colors[color % len(colors)],
-            line_width=2,
-        )
-    except DataFrameEmpty as eD:
-        print(f"{eD}")
-        
-    except Exception as e:
-        print(f"Error processing {file}: {e}")
-    color += 1
-
-    lsv.legend.location = "bottom_right"
-    #lsv.legend.title = "ZnSO4 Concentrations"
-    if threshold:
-        lsv.vspan(
-            x=[threshold + electrodePotential],
-            line_width=[1],
-            line_color="black",
-            line_dash="dashed",
-            legend_label="Threshold",
-        )
-
-    show(lsv)
+        ## Constrain axes
+        # cv.x_range.start = -0.5
+        # cv.x_range.end = 4
+        # cv.y_range.start = -20
+        # cv.y_range.end = 20
 
 
-class DataFrameEmpty(Exception):
-    pass
-
-
-def cv_plot(data_dict):
-    output_notebook()
-    cv = figure(
-        title="Cyclic Voltammetry",
-        x_axis_label="Potential (V vs Zn)",
-        y_axis_label="Current density (mA/cm^2)",
-        width=800,
-        height=400,
-        tools="box_select,box_zoom,lasso_select,reset",
-    )
-
-    ## Constrain axes
-    # cv.x_range.start = -0.5
-    # cv.x_range.end = 4
-    # cv.y_range.start = -20
-    # cv.y_range.end = 20
-
-    cv.background_fill_color = plot_color
-    cv.border_fill_color = backgrund_color
-
-    color = 0
-    for key, value in data_dict.items():
-        try:
-            # Load data
-            df = ecf.to_df(value[0])
-            if df.empty:
-                raise DataFrameEmpty(f"Data frame is empty for {key}")
-
-            # Adjust potential and current density
-            SCE = 0.241
-            el_surface_area = 2.48
+        for e, i in enumerate(items):
+            key = list(self.data_cv)[i]
+            file_path = list(self.data_cv.values())[i][0]
+            df = ecf.to_df(file_path)     
 
             potential = df["Ewe"]  # - SCE
-            current = df["<I>"] / el_surface_area
+            current = df["<I>"] / self.el_surface_area
 
             # Plot
-            colors = small_palettes["Viridis"][4]
+            colors = self.get_colors(items)
             cv.line(
                 potential,
                 current,
                 legend_label=key,
-                line_color=colors[color % len(colors)],
+                line_color=colors[e],
                 line_width=2,
             )
-        except DataFrameEmpty as eD:
-            print(f"{eD}")
-        except Exception as e:
-            print(f"Error processing {key}: {e}")
 
-        color += 1
+        cv.legend.location = "top_left"
 
-    cv.legend.location = "top_left"
-    #cv.legend.title = "ZnSO4 Concentrations"
-
-    show(cv)
-
-# LSV dictionary maker
+        show(cv)
 
 
-def lsv_dictionary(path):
-    folder_path = Path(path)
+    def lsv_plot(self, items, electrodePotential=0):
 
-    data_dict = {}
+        if len(items) == 1:
+            plot_title = f"Linear Sweep Voltammetry of {list(self.data_lsv)[items[0]]}"
+        else: 
+            plot_title = "Linear Sweep Voltammetry"
 
-    # Iterate over all .mpr files that contain "LSV"
-    for file_path in folder_path.iterdir():
-        if (
-            file_path.is_file()
-            and file_path.suffix == ".mpr"
-            and "LSV" in file_path.name
-        ):
-            # Find the position of "LSV"
-            file_name = file_path.name
-            lsv_index = file_name.find("LSV")
+        output_notebook()
 
-            # Extract 4 characters before "LSV"
-            if lsv_index > 4:  # Ensure there are at least 4 characters before
-                prefix = file_name[: lsv_index - 4]
-                # print(f"Prefix before 'LSV': {prefix}")
-            else:
-                print(f"Not enough characters before 'LSV' in {file_name}")
-                prefix = "InvalidPrefix"
+        lsv = figure(
+            title=plot_title,
+            x_axis_label="Potential (V vs Zn)",
+            y_axis_label="Current density (mA/cm^2)",
+            width=800,
+            height=400,
+            #tools="box_select,box_zoom,lasso_select,reset",
+        )
 
-            # Add the file name to the dictionary under the appropriate prefix
-            if prefix not in data_dict:
-                data_dict[prefix] = [str(file_path)]
-            else:
-                data_dict[prefix].append(str(file_path))
+        # Constrain axes
+        #lsv.x_range.start = -0.5
+        #lsv.x_range.end = 4
+        #lsv.y_range.start = -20
+        #lsv.y_range.end = 20
 
+        for e, i in enumerate(items):
+            key = list(self.data_lsv)[i]
+            file_path = list(self.data_lsv.values())[i][0]
+            df = ecf.to_df(file_path)    
 
-    return data_dict
-
-
-
-def lsv_dictionary_2(path):
-    folder_path = Path(path)
-
-    data = []
-
-    # Iterate over all .mpr files that contain "LSV"
-    for file_path in folder_path.iterdir():
-        if (
-            file_path.is_file()
-            and file_path.suffix == ".mpr"
-            and "LSV" in file_path.name
-        ):
-            # Find the position of "LSV"
-            file_name = file_path.name
-            lsv_index = file_name.find("LSV")
-
-            # Extract 4 characters before "LSV"
-            if lsv_index > 4:  # Ensure there are at least 4 characters before
-                prefix = file_name[: lsv_index - 4]
-                # print(f"Prefix before 'LSV': {prefix}")
-            else:
-                print(f"Not enough characters before 'LSV' in {file_name}")
-                prefix = "InvalidPrefix"
-
-            ## Add the file name to the dictionary under the appropriate prefix
-            #if prefix not in data_dict:
-            #    data_dict[prefix] = [str(file_path)]
-            #else:
-            #    data_dict[prefix].append(str(file_path))
-            #
-            #
-            data.append(str(file_path))
-
-
-    return data
-    
-
-
-# CV dictionary maker
-def cv_dictionary(path):
-    folder_path = Path(path)
-    data_dict = {}
-
-    # Iterate over all .mpr files that contain "LSV"
-    for file_path in folder_path.iterdir():
-        if (
-            file_path.is_file()
-            and file_path.suffix == ".mpr"
-            and "CV" in file_path.name
-        ):
-            # Find the position of "CV"
-            file_name = file_path.name
-            lsv_index = file_name.find("CV")
-
-            # Extract 4 characters before "LSV"
-            if lsv_index > 1:  # Ensure there are at least 4 characters before
-                prefix = file_name[: lsv_index - 1]
-                # print(f"Prefix before 'LSV': {prefix}")
-            else:
-                print(f"Not enough characters before 'CV' in {file_name}")
-                prefix = "InvalidPrefix"
-
-            # Add the file name to the dictionary under the appropriate prefix
-            if prefix not in data_dict:
-                data_dict[prefix] = [str(file_path)]
-
+            potential = df["Ewe"] + electrodePotential
+            current = df["<I>"] / self.el_surface_area
+            # Plot
+            colors = self.get_colors(items)
+            
+            lsv.line(
+                potential,
+                current,
+                legend_label=key,
+                line_color=colors[e],
+                line_width=2,
+            )
    
+        lsv.legend.location = "bottom_right"
+   
+        show(lsv)
 
-    return data_dict
+    def lst_plot_split(self, items, threshold=0.5, electrodePotential=0):
+
+        if len(items) == 1:
+            plot_title = "Threshold Linear Sweep Voltammetry"
+        else: 
+            plot_title = "Threshold Linear Sweep Voltammetry"
+
+        output_notebook()
+
+        lsv = figure(
+            title= plot_title,
+            x_axis_label="Potential (V vs Zn)",
+            y_axis_label="Current density (mA/cm^2)",
+            width=800,
+            height=400,
+            #tools="box_select,box_zoom,lasso_select,reset",
+            background_fill_color = self.plot_color,
+            border_fill_color = self.background_color,
+
+        )
+                
+        # Constrain axes
+        #lsv.x_range.start = -0.5
+        #lsv.x_range.end = 4
+        #lsv.y_range.start = -20
+        #lsv.y_range.end = 20
+
+        for count, pair in enumerate(items):
+            print("Pair: ",pair)
+            for e, i in enumerate(pair):
+                key = list(self.data_lsv)[i]
+                file_path = list(self.data_lsv.values())[i][0]
+                df = ecf.to_df(file_path)    
+                
+                if e == 0:
+                    df0 = df[df["Ewe"] < threshold].iloc[::-1]
+                if e == 1:
+                    df1 = df[df["Ewe"] > threshold]
+
+            
+            
+            dfcombined = pd.concat([df0, df1])
+
+            #print("combined", dfcombined)
+
+            potential = dfcombined["Ewe"] + electrodePotential
+            current = dfcombined["<I>"] / self.el_surface_area
+
+            # Plot
+            colors = self.get_colors(items)
+            lsv.line(
+                potential,
+                current,
+                legend_label=key,
+                line_color=colors[count],
+                line_width=2,
+            )
+
+        lsv.legend.location = "bottom_right"
+        #lsv.legend.title = "ZnSO4 Concentrations"
+    
+        lsv.vspan(
+            x=[threshold + electrodePotential],
+            line_width=[1],
+            line_color="black",
+            line_dash="dashed",
+            legend_label="Threshold",
+        )
+
+        show(lsv)

@@ -3,93 +3,136 @@ import eclabfiles as ecf
 from bokeh.palettes import small_palettes
 from pathlib import Path
 from bokeh.plotting import figure, output_notebook, show
+from bokeh.layouts import row
+from src.eclabvisual.utils import Grapher
 
 class DataFrameEmpty(Exception):
     pass
 
+class PEISGrapher(Grapher):
+    def __init__(self, data):
+        super().__init__()
+        self.data_peis = data.data_peis
 
-def PEIS(dict):
+    def nyquist_plot(self, items):
 
-    output_notebook()
-    pe = figure(
-        title="Nyquist plot",
-        x_axis_label="Real values Z' (Ω)",
-        y_axis_label="Imaginary values Z'' (Ω)",
-        width=800,
-        height=400,
-    )
+        if len(items) == 1:
+            plot_title = f"Nyquist plot of {list(self.data_peis)[items[0]]}"
+        else: 
+            plot_title = "Nyquist plot"
 
-    ## Constrain axes
-    # pe.x_range.start = -0.5  # Set x-axis range from 0 to 3V
-    # pe.x_range.end = 4
-    # pe.y_range.start = -20  # Set y-axis range from 0 to 20 mA/cm^2
-    # pe.y_range.end = 20
+        output_notebook()
 
-    color = 0
-    for key, value in dict.items():
-        try:
-            df = ecf.to_df(value[0])
-            if df.empty:
-                raise DataFrameEmpty(f"Data frame is empty for {key}")
+    
+        pe = figure(
+            title= plot_title,
+            x_axis_label="Real values Z' (Ω)",
+            y_axis_label="Imaginary values Z'' (Ω)",
+            width=800,
+            height=400,
+        )
 
-        except DataFrameEmpty as eD:
-            print(f"Error processing frame: {eD}")
-            continue
-        except Exception as e:
-            print(f"Error processing {key}: {e}")
-            continue
+        ## Constrain axes
+        # pe.x_range.start = -0.5  # Set x-axis range from 0 to 3V
+        # pe.x_range.end = 4
+        # pe.y_range.start = -20  # Set y-axis range from 0 to 20 mA/cm^2
+        # pe.y_range.end = 20
 
 
-        zReal = df["Re(Z)"]
-        zImagine = df["-Im(Z)"]
+ 
+    
 
-        # Plot
-        colors = small_palettes["Viridis"][4]
-        pe.line(
+        for e, i in enumerate(items):
+            key = list(self.data_peis)[i]
+            file_path = list(self.data_peis.values())[i][0]
+            df = ecf.to_df(file_path)    
+
+            zReal = df["Re(Z)"]
+            zImagine = df["-Im(Z)"]
+
+            # Plot
+            colors = self.get_colors(items)
+            pe.line(
             zReal,
             zImagine,
             legend_label=key,
-            line_color=colors[color % len(colors)],
+            line_color=colors[e],
             line_width=1,
         )
 
-        color += 1
+        pe.legend.location = "bottom_right"
+    
+        show(pe)
 
-    pe.legend.location = "bottom_right"
-    #pe.legend.title = "ZnSO4 Concentrations"
-    show(pe)
+    def bode_plots(self, items):
+
+        if len(items) == 1:
+            plot_title = f"{list(self.data_peis)[items[0]]}"
+        else: 
+            plot_title = ""
+
+        output_notebook()
+
+    ######## TIll here
+    ## One plot is log(freq) and log(Z=impedance), and the other is log(freq) and log phase shift
+        mag_plot = figure(
+            title= "Magnitude bode plot " + plot_title,
+            x_axis_label="Log(Frequency) (Hz)",
+            y_axis_label="Magnitude of impedance (Ω)",
+            width=400,
+            height=400,
+        )
+
+        phase_plot = figure(
+            title= "Phase bode plot " + plot_title,
+            x_axis_label="Log(Frequency) (Hz)",
+            y_axis_label="Phase (degree)",
+            width=400,
+            height=400,
+        )
 
 
 
+        ## Constrain axes
+        # pe.x_range.start = -0.5  # Set x-axis range from 0 to 3V
+        # pe.x_range.end = 4
+        # pe.y_range.start = -20  # Set y-axis range from 0 to 20 mA/cm^2
+        # pe.y_range.end = 20
 
 
 
-def PEIS_dictionary(path):
-    folder_path = Path(path)
-    data_dict = {}
+        for e, i in enumerate(items):
+            key = list(self.data_peis)[i]
+            file_path = list(self.data_peis.values())[i][0]
+            df = ecf.to_df(file_path)    
+
+            Zmag = df["|Z|"]
+            phase = df["Phase(Z)"]
+            freq = df["freq"] # Need to add log here
+
+            # Mag Plot
+            colors = self.get_colors(items)
+            mag_plot.line(
+            freq,
+            Zmag,
+            legend_label=key,
+            line_color=colors[e],
+            line_width=1,
+            )
 
 
-    # Iterate over all .mpr files that contain "LSV"
-    for file_path in folder_path.iterdir():
-        if (
-            file_path.is_file()
-            and file_path.suffix == ".mpr"
-            and "PEIS" in file_path.name
-        ):
-            # Find the position of "GCLP"
-            file_name = file_path.name
-            peis_index = file_name.find("PEIS")
+            # Phase Plot
+            colors = self.get_colors(items)
+            phase_plot.line(
+            freq,
+            phase,
+            legend_label=key,
+            line_color=colors[e],
+            line_width=1,
+            )
 
-            # Extract 4 characters before "LSV"
-            if peis_index > 1:  # Ensure there are at least 4 characters before
-                prefix = file_name[: peis_index - 1]
-                # print(f"Prefix before 'LSV': {prefix}")
-            else:
-                print(f"Not enough characters before 'CV' in {file_name}")
-                prefix = "InvalidPrefix"
+        mag_plot.legend.location = "bottom_right"
+    
+        show(row(mag_plot, phase_plot))
 
-            # Add the file name to the dictionary under the appropriate prefix
-            if prefix not in data_dict:
-                data_dict[prefix] = [str(file_path)]
 
-    return data_dict
