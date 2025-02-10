@@ -109,7 +109,7 @@ class CyclingGrapher(Grapher):
             )
 
 
-        CE.legend.location = "bottom_right"
+        #CE.legend.location = "bottom_right"
    
         show(CE)
 

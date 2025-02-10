@@ -6,6 +6,8 @@ from src.eclabvisual.utils import Grapher
 import eclabfiles as ecf
 import pandas as pd
 
+
+
 # Linear Sweep Voltammetry function
 
 class DataFrameEmpty(Exception):
@@ -64,7 +66,7 @@ class VoltammetryGrapher(Grapher):
             )
 
         cv.legend.location = "top_left"
-
+        
         show(cv)
 
 
@@ -74,8 +76,9 @@ class VoltammetryGrapher(Grapher):
             plot_title = f"Linear Sweep Voltammetry of {list(self.data_lsv)[items[0]]}"
         else: 
             plot_title = "Linear Sweep Voltammetry"
-
+        
         output_notebook()
+      
 
         lsv = figure(
             title=plot_title,
@@ -111,7 +114,8 @@ class VoltammetryGrapher(Grapher):
             )
    
         lsv.legend.location = "bottom_right"
-   
+        
+
         show(lsv)
 
     def lst_plot_split(self, items, threshold=0.5, electrodePotential=0):

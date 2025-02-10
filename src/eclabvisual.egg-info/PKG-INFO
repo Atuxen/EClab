@@ -2,7 +2,7 @@ Metadata-Version: 2.2
 Name: eclabvisual
 Version: 0.1.0
 Author-email: Andreas <achtu@dtu.dk>
-Requires-Python: >=3.7
+Requires-Python: <3.13,>=3.7
 Description-Content-Type: text/markdown
 Requires-Dist: pandas
 Requires-Dist: ipython
