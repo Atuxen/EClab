@@ -5,6 +5,7 @@ from pathlib import Path
 from bokeh.plotting import figure, output_notebook, show
 from bokeh.layouts import row
 from src.eclabvisual.utils import Grapher
+import numpy as np
 
 class DataFrameEmpty(Exception):
     pass
@@ -77,7 +78,7 @@ class PEISGrapher(Grapher):
     ## One plot is log(freq) and log(Z=impedance), and the other is log(freq) and log phase shift
         mag_plot = figure(
             title= "Magnitude bode plot " + plot_title,
-            x_axis_label="Log(Frequency) (Hz)",
+            x_axis_label="Log10 Frequency (Hz)",
             y_axis_label="Magnitude of impedance (Ω)",
             width=400,
             height=400,
@@ -85,8 +86,8 @@ class PEISGrapher(Grapher):
 
         phase_plot = figure(
             title= "Phase bode plot " + plot_title,
-            x_axis_label="Log(Frequency) (Hz)",
-            y_axis_label="Phase (degree)",
+            x_axis_label="Log10 Frequency (Hz)",
+            y_axis_label="Phase (°)",
             width=400,
             height=400,
         )
@@ -108,7 +109,7 @@ class PEISGrapher(Grapher):
 
             Zmag = df["|Z|"]
             phase = df["Phase(Z)"]
-            freq = df["freq"] # Need to add log here
+            freq = np.log10(df["freq"]) # Need to add log here
 
             # Mag Plot
             colors = self.get_colors(items)
@@ -131,7 +132,7 @@ class PEISGrapher(Grapher):
             line_width=1,
             )
 
-        mag_plot.legend.location = "bottom_right"
+    
     
         show(row(mag_plot, phase_plot))
 

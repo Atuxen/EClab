@@ -5,6 +5,7 @@ from pathlib import Path
 import pandas as pd
 from IPython.display import HTML, display
 import eclabfiles as ecf
+import eclabfiles as ecf
 
 
 class DataFrameEmpty(Exception):
@@ -69,6 +70,11 @@ class DataDictionary:
         flattened_data = [{'Sample': key, 'File path': value[0]} for key, value in dictionary.items()]
         df = pd.DataFrame(flattened_data)
         display(HTML(df.to_html()))
+
+    def viewData(self, path):
+        df = ecf.to_df(path)    
+        print(df)
+        return df
 
 
 
