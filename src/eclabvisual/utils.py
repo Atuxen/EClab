@@ -25,7 +25,8 @@ class DataDictionary:
         folder_path = Path(self.path)
         data_dict = {}
 
-        print(f"Checking {filetype} files in {folder_path} ...")
+        print(f"Loading {filetype} files in {folder_path} ...")
+        print("_______________________________________________")
 
         for file_path in folder_path.glob('**/*'):
             if (
@@ -34,7 +35,7 @@ class DataDictionary:
                 and filetype in file_path.name
             ):
                 file_name = file_path.name
-                filetype_index = file_name.find(filetype)
+                filetype_index = file_name.rfind(filetype)
 
                 if filetype_index > 1:
                     prefix = file_name[: filetype_index - 1]
@@ -47,20 +48,20 @@ class DataDictionary:
                 try:
                     df = ecf.to_df(file_path)
                     if df.empty:
-                        raise DataFrameEmpty(f"Data frame is empty for {prefix}")
+                        raise DataFrameEmpty(f"Data frame is empty for {file_name}")
                     if prefix not in data_dict:
                     
                         data_dict[prefix] = []
                     data_dict[prefix].append(str(file_path))
 
                 except DataFrameEmpty as eD:
-                    print(f"Empty data Error: {eD}")
+                    print(eD)
                     continue
                 except Exception as e:
                     print(f"Error processing {prefix}: {e}")
                     continue
-                    
-        print(f"Found the following {filetype} files: ")
+        print("_______________________________________________")
+        print(f"{filetype} files: ")
         self.tabulate(data_dict)
                 
         return data_dict
