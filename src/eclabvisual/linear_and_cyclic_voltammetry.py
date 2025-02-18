@@ -31,8 +31,8 @@ class VoltammetryGrapher(Grapher):
 
         cv = figure(
             title="Cyclic Voltammetry",
-            x_axis_label="Potential (V vs Zn)",
-            y_axis_label="Current density (mA/cm^2)",
+            x_axis_label="Potential (V vs Zn/Zn²⁺)",
+            y_axis_label="Current Density (mA cm⁻²)",  # Using Unicode for superscript
             width=800,
             height=400,
             background_fill_color = self.plot_color,
@@ -70,33 +70,39 @@ class VoltammetryGrapher(Grapher):
         show(cv)
 
 
-    def lsv_plot(self, items, electrodePotential=0):
+    def lsv_plot(self, items, electrodePotential=0, plot_title=None, names = None):
 
-        if len(items) == 1:
-            plot_title = f"Linear Sweep Voltammetry of {list(self.data_lsv)[items[0]]}"
-        else: 
-            plot_title = "Linear Sweep Voltammetry"
-        
+        if not plot_title:
+            if len(items) == 1:
+                plot_title = f"Linear Sweep Voltammetry of {list(self.data_lsv)[items[0]]}"
+            else: 
+                plot_title = "Linear Sweep Voltammetry"
+            
         output_notebook()
       
 
         lsv = figure(
             title=plot_title,
-            x_axis_label="Potential (V vs Zn)",
-            y_axis_label="Current density (mA/cm^2)",
+            x_axis_label="Potential (V vs Zn/Zn²⁺)",
+            y_axis_label="Current Density (mA cm⁻²)",  # Using Unicode for superscript
             width=800,
             height=400,
             #tools="box_select,box_zoom,lasso_select,reset",
+            background_fill_color = self.plot_color,
+            border_fill_color = self.background_color,
         )
 
         # Constrain axes
-        #lsv.x_range.start = -0.5
-        #lsv.x_range.end = 4
-        #lsv.y_range.start = -20
-        #lsv.y_range.end = 20
+        lsv.x_range.start = -0.5
+        lsv.x_range.end = 4
+        lsv.y_range.start = -4
+        lsv.y_range.end = 4
 
         for e, i in enumerate(items):
-            key = list(self.data_lsv)[i]
+            if not names:
+                key = list(self.data_lsv)[i]
+            else:
+                key = names[e]
             file_path = list(self.data_lsv.values())[i][0]
             df = ecf.to_df(file_path)    
 
@@ -118,19 +124,20 @@ class VoltammetryGrapher(Grapher):
 
         show(lsv)
 
-    def lst_plot_split(self, items, threshold=0.5, electrodePotential=0):
+    def lst_plot_split(self, items, threshold=0.5, electrodePotential=0, plot_title = None, names = None):
 
-        if len(items) == 1:
-            plot_title = "Threshold Linear Sweep Voltammetry"
-        else: 
-            plot_title = "Threshold Linear Sweep Voltammetry"
+        if not plot_title:
+            if len(items) == 1:
+                plot_title = "Threshold Linear Sweep Voltammetry"
+            else: 
+                plot_title = "Threshold Linear Sweep Voltammetry"
 
         output_notebook()
 
         lsv = figure(
             title= plot_title,
-            x_axis_label="Potential (V vs Zn)",
-            y_axis_label="Current density (mA/cm^2)",
+            x_axis_label="Potential (V vs Zn/Zn²⁺)",
+            y_axis_label="Current Density (mA cm⁻²)",  # Using Unicode for superscript
             width=800,
             height=400,
             #tools="box_select,box_zoom,lasso_select,reset",
@@ -140,15 +147,15 @@ class VoltammetryGrapher(Grapher):
         )
                 
         # Constrain axes
-        #lsv.x_range.start = -0.5
-        #lsv.x_range.end = 4
-        #lsv.y_range.start = -20
-        #lsv.y_range.end = 20
+        lsv.x_range.start = -1
+        lsv.x_range.end = 5
+        lsv.y_range.start = -10
+        lsv.y_range.end = 10
 
         for count, pair in enumerate(items):
             print("Pair: ",pair)
             for e, i in enumerate(pair):
-                key = list(self.data_lsv)[i]
+            
                 file_path = list(self.data_lsv.values())[i][0]
                 df = ecf.to_df(file_path)    
                 
@@ -157,7 +164,10 @@ class VoltammetryGrapher(Grapher):
                 if e == 1:
                     df1 = df[df["Ewe"] > threshold]
 
-            
+            if not names:
+                key = list(self.data_lsv)[count]
+            else: 
+                key = names[count]
             
             dfcombined = pd.concat([df0, df1])
 

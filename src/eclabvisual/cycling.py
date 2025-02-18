@@ -14,59 +14,77 @@ class CyclingGrapher(Grapher):
         super().__init__()
         self.data_gcpl = data.data_gcpl
 
-    def gcpl_plot(self, items):
+    def gcpl_plot(self, items, plot_title= None, names = None):
         """
         Plots galvanostatic cycling data for the given dictionary prefix.
         """
-
-        if len(items) == 1:
-            plot_title = f"Galvanostatic Cycling of {list(self.data_gcpl)[items[0]]}"
-        else: 
-            plot_title = "Galvanostatic Cycling"
+        TOOLTIPS = [("(Hours, mV)", "($x, $y)")]
+        if not plot_title:
+            if len(items) == 1:
+                plot_title = f"Galvanostatic Cycling of {list(self.data_gcpl)[items[0]]}"
+            else: 
+                plot_title = "Galvanostatic Cycling"
 
         output_notebook()
         fig = figure(
             title = plot_title,
             x_axis_label="Time (h)",
-            y_axis_label="Ewe (V vs Zn)",
+            y_axis_label="Ewe (mV vs Zn/Zn²⁺)",
             width=800,
             height=300,
-            background_fill_color = self.background_color,
-            border_fill_color = self.plot_color  # or background_fill_color if desired
+            background_fill_color = self.plot_color,
+            border_fill_color = self.background_color,  # or background_fill_color if desired
+            tools = "box_zoom,wheel_zoom,reset, hover",
+            tooltips = TOOLTIPS,
         )
 
+
+        fig.y_range.start = -300  # Set y-axis range from 0 to 20 mA/cm^2
+        fig.y_range.end = 300
+
         for e, i in enumerate(items):
-            key = list(self.data_gcpl)[i]
+
+            if not names:
+                key = list(self.data_gcpl)[i]
+            else: 
+                key = names[e]
             file_path = list(self.data_gcpl.values())[i][0]
 
             df = ecf.to_df(file_path)
             df["Hours"] = df["time"] / 3600  # from seconds to hours
 
             time = df["Hours"]
-            potential = df["Ewe"]
+            potential = df["Ewe"] * 1000  # Convert V to mV
 
             colors = self.get_colors(items)
+
+            if len(items) == 1:
+                key = ""
 
             fig.line(
                 time,
                 potential,
-                legend_label=key,
                 line_color=colors[e],  # or however you want to pick colors
+                legend_label=key,
                 line_width=1
             )
-        if len(items) > 1:
-            fig.legend.location = "bottom_right"
+
+            
+                
+                #fig.legend.location = "bottom_right"
 
         show(fig)
 
 
-    def CEplot(self, items):
+    def CEplot(self, items, plot_title= None, names=None):
         output_notebook()
+        TOOLTIPS = [("(x, y)", "($x, $y)")]
 
-        if len(items) == 1:
-            plot_title = f"Coulombic Effeciency of {list(self.data_gcpl)[items[0]]}"
-        else: 
-            plot_title = "Coulombic Effeciency"
+        if not plot_title:
+            if len(items) == 1:
+                plot_title = f"Coulombic Effeciency of {list(self.data_gcpl)[items[0]]}"
+            else: 
+                plot_title = "Coulombic Effeciency"
 
         CE = figure(
             title = plot_title,
@@ -75,8 +93,9 @@ class CyclingGrapher(Grapher):
             width=800,
             height=400,
             background_fill_color = self.plot_color,
-            border_fill_color = self.background_color
-            #tools="box_zoom,lasso_select,reset, save",
+            border_fill_color = self.background_color,
+            tools = "box_zoom,wheel_zoom,reset, hover",
+            tooltips = TOOLTIPS,
         )
 
         ## Constrain axes
@@ -87,7 +106,9 @@ class CyclingGrapher(Grapher):
 
 
         for e, i in enumerate(items):
-            key = list(self.data_gcpl)[i]
+            if not names:
+                key = list(self.data_gcpl)[i]
+            else: key = names[e]
             file_path = list(self.data_gcpl.values())[i][0]
             # The CE function
             df = ecf.to_df(file_path)
@@ -109,9 +130,67 @@ class CyclingGrapher(Grapher):
             )
 
 
-        #CE.legend.location = "bottom_right"
+        CE.legend.location = "bottom_right"
    
         show(CE)
+
+    def cap_retention(self, items, plot_title = None, names = None):
+
+        if not plot_title:
+            if len(items) == 1:
+                plot_title = f"Capacity retention of {list(self.data_gcpl)[items[0]]}"
+            else: 
+                plot_title = "Capacity retention"
+
+        output_notebook()
+
+        CR = figure(
+            title=plot_title,
+            x_axis_label="Cycle number",
+            y_axis_label="Capacity retention (%)",
+            width=800,
+            height=400,
+            background_fill_color = self.plot_color,
+            border_fill_color = self.background_color
+            #tools="box_select,box_zoom,lasso_select,reset",
+        )
+
+        ## Constrain axes
+        #CR.x_range.start = -0.5  # Set x-axis range from 0 to 3V
+        #CR.x_range.end = 500
+        #CR.y_range.start = 0  # Set y-axis range from 0 to 20 mA/cm^2
+        #CR.y_range.end = 100
+
+        for e, i in enumerate(items):
+            if not names: 
+                key = list(self.data_gcpl)[i]
+            else: 
+                key = names[e]
+            file_path = list(self.data_gcpl.values())[i][0]
+            df = ecf.to_df(file_path)
+
+            # The CE function
+            
+            try:
+                cycle, _, capacity_retention = self.columbicEf(df)
+            except Exception as e:
+                print(f"Not enough cycles in file {key}")
+                continue
+
+            # Plot
+            colors = self.get_colors(items)
+            CR.scatter(
+                cycle,
+                capacity_retention,
+                legend_label=key,
+                color=colors[e],
+            )
+
+
+        CR.legend.location = "bottom_right"
+        #CR.legend.title = "ZnSO4 Concentrations"
+        show(CR)
+
 
     def columbicEf(self, df):
 
@@ -164,60 +243,5 @@ class CyclingGrapher(Grapher):
 
         return cycle, coleff, capacity_retention
 
-
-
-
-    def cap_retention(self, items):
-
-        if len(items) == 1:
-            plot_title = f"Capacity retention of {list(self.data_gcpl)[items[0]]}"
-        else: 
-            plot_title = "Capacity retention"
-
-        output_notebook()
-
-        CR = figure(
-            title=plot_title,
-            x_axis_label="Cycle number",
-            y_axis_label="Capacity retention (%)",
-            width=800,
-            height=400,
-            background_fill_color = self.plot_color,
-            border_fill_color = self.background_color
-            #tools="box_select,box_zoom,lasso_select,reset",
-        )
-
-        ## Constrain axes
-        #CR.x_range.start = -0.5  # Set x-axis range from 0 to 3V
-        #CR.x_range.end = 500
-        #CR.y_range.start = 0  # Set y-axis range from 0 to 20 mA/cm^2
-        #CR.y_range.end = 100
-
-        for e, i in enumerate(items):
-            key = list(self.data_gcpl)[i]
-            file_path = list(self.data_gcpl.values())[i][0]
-            df = ecf.to_df(file_path)
-
-            # The CE function
-            
-            try:
-                cycle, _, capacity_retention = self.columbicEf(df)
-            except Exception as e:
-                print(f"Not enough cycles in file {key}")
-                continue
-
-            # Plot
-            colors = self.get_colors(items)
-            CR.scatter(
-                cycle,
-                capacity_retention,
-                legend_label=key,
-                color=colors[e],
-            )
-
-
-        CR.legend.location = "bottom_right"
-        #CR.legend.title = "ZnSO4 Concentrations"
-        show(CR)
 
 

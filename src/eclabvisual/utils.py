@@ -100,7 +100,6 @@ class DataDictionary:
 
 
 
-
     @staticmethod
     def detect_filetype(file_name: str, candidate_types: list) -> str:
         """
