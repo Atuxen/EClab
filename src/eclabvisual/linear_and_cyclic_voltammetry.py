@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from bokeh.palettes import small_palettes
 from bokeh.plotting import figure, output_notebook, show
-from src.eclabvisual.utils import Grapher
+from .utils import Grapher
 import eclabfiles as ecf
 import pandas as pd
 
