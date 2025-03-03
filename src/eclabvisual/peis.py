@@ -4,7 +4,7 @@ from bokeh.palettes import small_palettes
 from pathlib import Path
 from bokeh.plotting import figure, output_notebook, show
 from bokeh.layouts import row
-from src.eclabvisual.utils import Grapher
+from .utils import Grapher
 import numpy as np
 
 class DataFrameEmpty(Exception):
@@ -67,8 +67,8 @@ class PEISGrapher(Grapher):
             file_path = list(self.data_peis.values())[i][0]
             df = ecf.to_df(file_path)    
 
-            zReal = df["Re(Z)"] / self.cell.cell_constant
-            zImagine = df["-Im(Z)"] / self.cell.cell_constant
+            zReal = df["Re(Z)"] #/ self.cell.cell_constant
+            zImagine = df["-Im(Z)"] #// self.cell.cell_constant
 
             # Plot
             colors = self.get_colors(items)

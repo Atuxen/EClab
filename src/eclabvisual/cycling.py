@@ -4,7 +4,7 @@ from bokeh.plotting import figure, output_notebook, show
 import numpy as np
 from bokeh.io import export_png
 
-from src.eclabvisual.utils import DataDictionary, Grapher
+from .utils import DataDictionary, Grapher
 
 
 class CyclingGrapher(Grapher):
@@ -39,8 +39,8 @@ class CyclingGrapher(Grapher):
         )
 
 
-        fig.y_range.start = -300  # Set y-axis range from 0 to 20 mA/cm^2
-        fig.y_range.end = 300
+        fig.y_range.start = -100  # Set y-axis range from 0 to 20 mA/cm^2
+        fig.y_range.end = 100
 
         for e, i in enumerate(items):
 
