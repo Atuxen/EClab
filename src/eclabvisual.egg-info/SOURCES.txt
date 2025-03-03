@@ -3,6 +3,374 @@ EClab.code-workspace
 README.md
 notebook.ipynb
 pyproject.toml
+test.html
+Data old/ZnSO4_molal1_day3_02_GCPL_C03.mpr
+Data old/ZnSO4_molal1_day3_03_PEIS_C03.mgr
+Data old/ZnSO4_molal1_day3_03_PEIS_C03.mpr
+Data old/Cycling/ZnSO4(3m)_0,1mA.mps
+Data old/Cycling/ZnSO4(3m)_0,1mA_01_PEIS_C08.mgr
+Data old/Cycling/ZnSO4(3m)_0,1mA_01_PEIS_C08.mpl
+Data old/Cycling/ZnSO4(3m)_0,1mA_01_PEIS_C08.mpr
+Data old/Cycling/ZnSO4(3m)_0,1mA_02_GCPL_C08.mgr
+Data old/Cycling/ZnSO4(3m)_0,1mA_02_GCPL_C08.mpl
+Data old/Cycling/ZnSO4(3m)_0,1mA_02_GCPL_C08.mpr
+Data old/Cycling/ZnSO4(3m)_0,1mA_03_PEIS_C08.mgr
+Data old/Cycling/ZnSO4(3m)_0,1mA_03_PEIS_C08.mpl
+Data old/Cycling/ZnSO4(3m)_0,1mA_D104_C08.sta
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2.mps
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_01_PEIS_C05.mgr
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_01_PEIS_C05.mpl
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_02_GCPL_C05.mgr
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_02_GCPL_C05.mpl
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_02_GCPL_C05.mpr
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_03_PEIS_C05.mgr
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_03_PEIS_C05.mpl
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_03_PEIS_C05.mpr
+Data old/Cycling/ZnSO4(3m)_0,1mA_day2_D104_C05.sta
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA.mps
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_01_PEIS_C06.mgr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_01_PEIS_C06.mpr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_02_GCPL_C06.mgr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_02_GCPL_C06.mpr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_03_PEIS_C06.mgr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_03_PEIS_C06.mpr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_D104_C06.sta
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2.mps
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_01_PEIS_C06.mgr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_01_PEIS_C06.mpl
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_01_PEIS_C06.mpr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_02_GCPL_C06.mgr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_02_GCPL_C06.mpl
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_02_GCPL_C06.mpr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_03_PEIS_C06.mgr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_03_PEIS_C06.mpl
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_03_PEIS_C06.mpr
+Data old/Cycling/ZnTFSI-G4(1-4)_0,1mA_day2_D104_C06.sta
+Data old/Zn project/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
+Data old/Zn project/ZnSO4-Molal-1-EL-cell_01_LSV_C16.mpr
+Data old/Zn project/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
+Data old/Zn project/ZnSO4-Molal-2-EL-cell-90mikroL_01_LSV_C16.mpr
+Data old/Zn project/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
+Data old/Zn project/ZnSO4_H2O(3molar)_2_02_LSV_C03.mpr
+Data old/ZnSO4/ZnSO4(3m)_0,1mA_day5.mps
+Data old/ZnSO4/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel.mps
+Data old/ZnSO4/ZnSO4-Molal-1-EL-cell-90mikroL-Reduction.mps
+Data old/ZnSO4/ZnSO4-Molal-1-EL-cell-90mikroL-Reduction_C16.mpr
+Data old/ZnSO4/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass.mps
+Data old/ZnSO4/ZnSO4-Molal-1-EL-cell.mps
+Data old/ZnSO4/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep.mps
+Data old/ZnSO4/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel.mps
+Data old/ZnSO4/ZnSO4-Molal-2-EL-cell-90mikroL-Reduction.mps
+Data old/ZnSO4/ZnSO4-Molal-2-EL-cell-90mikroL-Reduction_C16.mpr
+Data old/ZnSO4/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass.mps
+Data old/ZnSO4/ZnSO4-Molal-2-EL-cell-90mikroL.mps
+Data old/ZnSO4/ZnSO4-Molal-2-Polished-50mikroL-bothsidesofsep.mps
+Data old/ZnSO4/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel.mps
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell-90mikroL-Reduction.mps
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell-90mikroL-Reduction2.mps
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell-90mikroL-Reduction2_C16.mpr
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell-90mikroL-Reduction_C16.mpr
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass.mps
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell-90mikroL.mps
+Data old/ZnSO4/ZnSO4-Molal-3-EL-cell.mps
+Data old/ZnSO4/ZnSO4-Molal-3-Polished1.mps
+Data old/ZnSO4/ZnSO4-Molal-3-test2.mps
+Data old/ZnSO4/ZnSO4-Molal-3-test2_C06.mpr
+Data old/ZnSO4/ZnSO4-Molal-3.mps
+Data old/ZnSO4/ZnSO4_H2O(3molar)_2.mps
+Data old/ZnSO4/ZnSO4_H2O(3molar)_CV.mps
+Data old/ZnSO4/ZnSO4_H2O(3molar)_CV_C03.mpr
+Data old/ZnSO4/ZnSO4_molal1_CV_day3.mps
+Data old/ZnSO4/ZnSO4_molal1_day3.mps
+Data old/ZnSO4/ZnSO4_molal2_day4.mps
+Data old/ZnSO4/ZnSO4_molal3_CV_day3.mps
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4(3m)_0,1mA_day5_02_GCPL_C05.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4(3m)_0,1mA_day5_02_GCPL_C05.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_02_GCPL_C06.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_02_GCPL_C06.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep_02_GCPL_C06.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep_02_GCPL_C06.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_02_GCPL_C01.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_02_GCPL_C01.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-2-Polished-50mikroL-bothsidesofsep_02_GCPL_C06.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-2-Polished-50mikroL-bothsidesofsep_02_GCPL_C06.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_02_GCPL_C03.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_02_GCPL_C03.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-3-Polished1_02_GCPL_C06.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4-Molal-3-Polished1_02_GCPL_C06.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4_molal1_CV_day3_02_GCPL_C03.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4_molal1_day3_02_GCPL_C08.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4_molal2_day4_02_GCPL_C12.mpl
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4_molal2_day4_02_GCPL_C12.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4_molal3_CV_day3_02_GCPL_C16.mpr
+Data old/ZnSO4/ZnSO4 GCPL/ZnSO4_molal3_CV_day3_03_PEIS_C16_02_GCPL_C01.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-1-EL-cell_02_LSV_C16.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-2-EL-cell-90mikroL_01_LSV_C16.mpl
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-3-EL-cell-90mikroL_01_LSV_C16.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-3-EL-cell-90mikroL_02_LSV_C16.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-3-EL-cell_02_LSV_C16.mpl
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-3-EL-cell_02_LSV_C16.mpr
+Data old/ZnSO4/ZnSO4 LSV/ZnSO4-Molal-3_02_LSV_C06.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4(3m)_0,1mA_day5_01_PEIS_C05.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4(3m)_0,1mA_day5_03_PEIS_C05.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4(3m)_0,1mA_day5_03_PEIS_C05.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_01_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_03_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Coincell-50mikroL-Zn-Steel_03_PEIS_C06.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep_01_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep_01_PEIS_C06.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep_03_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-1-Polished-50mikroL-bothsidesofsep_03_PEIS_C06.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_01_PEIS_C01.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_03_PEIS_C01.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-2-Coincell-50mikroL-Zn-Steel_03_PEIS_C01.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-2-Polished-50mikroL-bothsidesofsep_01_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-2-Polished-50mikroL-bothsidesofsep_03_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_01_PEIS_C03.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_03_PEIS_C03.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Coincell-50mikroL-Zn-Steel_03_PEIS_C03.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Polished1_01_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Polished1_01_PEIS_C06.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Polished1_03_PEIS_C06.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4-Molal-3-Polished1_03_PEIS_C06.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal1_CV_day3_03_PEIS_C03.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal1_day3_01_PEIS_C03.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal1_day3_03_PEIS_C03.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal1_day3_03_PEIS_C08.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal2_day4_01_PEIS_C12.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal2_day4_01_PEIS_C12.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal2_day4_03_PEIS_C12.mpl
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal2_day4_03_PEIS_C12.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal3_CV_day3_03_PEIS_C16.mpr
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal3_CV_day3_03_PEIS_C16.mps
+Data old/ZnSO4/ZnSO4 PEIS/ZnSO4_molal3_CV_day3_03_PEIS_C16_03_PEIS_C01.mpr
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)-test10.mps
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1).mps
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_01_LSV_C03.mpr
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_2.mps
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_2_01_LSV_C03.mpr
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_CV.mps
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_CV_2.mps
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_CV_2_C03.mpl
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_CV_2_C03.mpr
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_CV_C03.mpl
+Data old/ZnTFSI G4/LSV_G4-ZnTFSI(4-1)_CV_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test13.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test13_02_LSV_C14.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test14.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test14_02_LSV_C14.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test15.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test15_02_LSV_C16.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test16.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-4-ELCELL-80mikroL-Test16_01_LSV_C14.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-ELCELL-80mikroL-Test116.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-ELCELL-80mikroL-Test116_01_LSV_C15.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-ELCELL-80mikroL-Test116_02_LSV_C15.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-ELCELL-80mikroL-Test12.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-ELCELL-80mikroL-Test12_02_LSV_C15.mpr
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-Test11.mps
+Data old/ZnTFSI G4/ZnTFSI-G4-1-5-Test11_02_LSV_C15.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90.mps
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_01_PEIS_C06.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_01_PEIS_C06.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_02_GCPL_C06.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_02_GCPL_C06.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_02_GCPL_C06.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_03_PEIS_C06.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_03_PEIS_C06.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_03_PEIS_C06.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_10-90_D104_C06.sta
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80.mps
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_01_PEIS_C12.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_01_PEIS_C12.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_02_GCPL_C12.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_02_GCPL_C12.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_02_GCPL_C12.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_03_PEIS_C12.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_03_PEIS_C12.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_03_PEIS_C12.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_20-80_D104_C12.sta
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60.mps
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_01_PEIS_C05.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_01_PEIS_C05.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_01_PEIS_C05.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_02_GCPL_C05.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_02_GCPL_C05.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_02_GCPL_C05.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_03_PEIS_C05.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_03_PEIS_C05.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_03_PEIS_C05.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_40-60_D104_C05.sta
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95.mps
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_01_PEIS_C05.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_01_PEIS_C05.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_02_GCPL_C05.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_02_GCPL_C05.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_02_GCPL_C05.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_03_PEIS_C05.mgr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_03_PEIS_C05.mpl
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_03_PEIS_C05.mpr
+Data old/ZnTFSI G4/PEOTFSI2G4/PEOTFSI2G4_5-95_D104_C05.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_01_GCPL_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_01_GCPL_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_01_GCPL_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_02_PEIS_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_02_PEIS_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_02_PEIS_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_D104_C03.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-5-Coincell-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_01_GCPL_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_02_PEIS_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_02_PEIS_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-4-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_D104_C06.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_01_GCPL_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_01_GCPL_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_01_GCPL_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_02_PEIS_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_02_PEIS_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_02_PEIS_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-4-Coincell-Zn-Steel_D104_C03.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_01_GCPL_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_01_GCPL_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_01_GCPL_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_02_PEIS_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_02_PEIS_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_02_PEIS_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/PEO-1-8-ZnTFSI2-G4-1-5-Coincell-Zn-Steel_D104_C06.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_01_GCPL_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_01_GCPL_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_01_GCPL_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_02_PEIS_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_02_PEIS_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_02_PEIS_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-Coincell-60mikroL-Zn-Steel-Test-2_D104_C06.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel-test2.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel-test2_C15.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel-test2_C15.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel-test2_D104_C15.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel_C15.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel_C15.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel_C15.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-4-ELcell-90mikroL-Zn-Steel_D104_C15.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_01_GCPL_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_01_GCPL_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_01_GCPL_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_02_PEIS_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_02_PEIS_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_02_PEIS_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-3_D104_C01.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_01_GCPL_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_01_GCPL_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_01_GCPL_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_02_PEIS_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_02_PEIS_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_02_PEIS_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-4-1currentdensity_D104_C01.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5_01_GCPL_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5_01_GCPL_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5_02_PEIS_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5_02_PEIS_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5_02_PEIS_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-5_D104_C03.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_01_GCPL_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_01_GCPL_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_01_GCPL_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_02_PEIS_C03.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_02_PEIS_C03.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_02_PEIS_C03.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-Test-6_D104_C03.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_01_PEIS_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_02_GCPL_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_03_PEIS_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel-test2_D104_C01.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_01_PEIS_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_02_GCPL_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_03_PEIS_C01.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-1-5-Coincell-60mikroL-Zn-Steel_D104_C01.sta
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel.mps
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_01_PEIS_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_02_GCPL_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mgr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpl
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_03_PEIS_C06.mpr
+Data old/ZnTFSI G4/ZnTFSI2 characterization/ZnTFSI2-G4-4-1-Coincell-60mikroL-Zn-Steel_D104_C06.sta
+Data old/files/ZnSO4(3m)_0,1mA.mps
+Data old/files/ZnSO4(3m)_0,1mA_01_PEIS_C08.mgr
+Data old/files/ZnSO4(3m)_0,1mA_01_PEIS_C08.mpl
+Data old/files/ZnSO4(3m)_0,1mA_01_PEIS_C08.mpr
+Data old/files/ZnSO4(3m)_0,1mA_02_GCPL_C08.mgr
+Data old/files/ZnSO4(3m)_0,1mA_02_GCPL_C08.mpl
+Data old/files/ZnSO4(3m)_0,1mA_02_GCPL_C08.mpr
+Data old/files/ZnSO4(3m)_0,1mA_03_PEIS_C08.mgr
+Data old/files/ZnSO4(3m)_0,1mA_03_PEIS_C08.mpl
+Data old/files/ZnSO4(3m)_0,1mA_D104_C08.sta
+Data old/files/ZnSO4(3m)_0,1mA_day2.mps
+Data old/files/ZnSO4(3m)_0,1mA_day2_01_PEIS_C05.mgr
+Data old/files/ZnSO4(3m)_0,1mA_day2_01_PEIS_C05.mpl
+Data old/files/ZnSO4(3m)_0,1mA_day2_02_GCPL_C05.mgr
+Data old/files/ZnSO4(3m)_0,1mA_day2_02_GCPL_C05.mpl
+Data old/files/ZnSO4(3m)_0,1mA_day2_02_GCPL_C05.mpr
+Data old/files/ZnSO4(3m)_0,1mA_day2_03_PEIS_C05.mgr
+Data old/files/ZnSO4(3m)_0,1mA_day2_03_PEIS_C05.mpl
+Data old/files/ZnSO4(3m)_0,1mA_day2_03_PEIS_C05.mpr
+Data old/files/ZnSO4(3m)_0,1mA_day2_D104_C05.sta
+Data old/files/ZnTFSI-G4(1-4)_0,1mA.mps
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_01_PEIS_C06.mgr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_01_PEIS_C06.mpr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_02_GCPL_C06.mgr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_02_GCPL_C06.mpr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_03_PEIS_C06.mgr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_03_PEIS_C06.mpr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_D104_C06.sta
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2.mps
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_01_PEIS_C06.mgr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_01_PEIS_C06.mpl
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_01_PEIS_C06.mpr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_02_GCPL_C06.mgr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_02_GCPL_C06.mpl
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_02_GCPL_C06.mpr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_03_PEIS_C06.mgr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_03_PEIS_C06.mpl
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_03_PEIS_C06.mpr
+Data old/files/ZnTFSI-G4(1-4)_0,1mA_day2_D104_C06.sta
+Data old/files1/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-1-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-1-EL-cell_02_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-2-EL-cell-90mikroL-Zn-CarbonGlass_02_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-2-EL-cell-90mikroL_01_LSV_C16.mpl
+Data old/files1/ZnSO4-Molal-2-EL-cell-90mikroL_01_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-3-EL-cell-90mikroL-Zn-CarbonGlass_01_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-3-EL-cell-90mikroL_01_LSV_C16.mpr
+Data old/files1/ZnSO4-Molal-3-EL-cell_02_LSV_C16.mpl
+Data old/files1/ZnSO4-Molal-3-EL-cell_02_LSV_C16.mpr
+Data old/files1/ZnSO4_H2O(3molar)_2_01_LSV_C03.mpr
+Data old/files1/ZnSO4_H2O(3molar)_2_02_LSV_C03.mpr
 src/EClab.egg-info/PKG-INFO
 src/EClab.egg-info/SOURCES.txt
 src/EClab.egg-info/dependency_links.txt
